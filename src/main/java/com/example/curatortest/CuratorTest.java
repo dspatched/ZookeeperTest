@@ -45,18 +45,6 @@ public class CuratorTest {
                 System.out.println("CHANGE!");
             }
         }).forPath(KAFKA_PATH);
-
-/*        client.getData().usingWatcher((CuratorWatcher) event -> {
-            if (event.getType().equals(NodeDeleted) ||
-                    event.getType().equals(NodeDataChanged) ||
-                    event.getType().equals(NodeChildrenChanged) ||
-                    event.getType().equals(NodeCreated)) {
-                updateData(client, path);
-                getKafkaBootstrapServers();
-                System.out.println("CHANGE!");
-            }
-        }).forPath(path);*/
-
     }
 
     private void updateData(CuratorFramework client, String path) throws Exception {
