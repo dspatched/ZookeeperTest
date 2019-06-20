@@ -19,6 +19,8 @@ configurations {
     }
 }
 
+build.dependsOn.remove('check')
+
 repositories {
     mavenCentral()
 }
